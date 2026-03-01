@@ -707,3 +707,22 @@ body{
 .floating-wa:hover {
     transform: scale(1.1);
 }
+
+/* SOCIAL BUTTON ENHANCEMENT */
+.social-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 8px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #4e73df, #6f42c1);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    opacity: 0.9;
+}
