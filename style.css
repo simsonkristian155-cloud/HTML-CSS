@@ -1,4 +1,6 @@
-/* RESET */
+/* ===============================
+   RESET
+=================================*/
 *{
     margin:0;
     padding:0;
@@ -13,14 +15,18 @@ body{
     font-family:Arial, sans-serif;
 }
 
-/* CONTAINER */
+/* ===============================
+   CONTAINER
+=================================*/
 .container{
     max-width:1100px;
     margin:auto;
     padding:0 20px;
 }
 
-/* NAVBAR */
+/* ===============================
+   NAVBAR
+=================================*/
 .navbar{
     position:fixed;
     width:100%;
@@ -45,9 +51,12 @@ body{
 .nav-links a{
     text-decoration:none;
     color:#333;
+    font-weight:500;
 }
 
-/* HERO */
+/* ===============================
+   HERO
+=================================*/
 .hero{
     height:100vh;
     display:flex;
@@ -82,23 +91,29 @@ body{
     text-decoration:none;
 }
 
-/* SECTION TITLE */
+/* ===============================
+   SECTION TITLE
+=================================*/
 .section-title{
     text-align:center;
-    font-size:32px;
+    font-size:36px;
     margin-bottom:60px;
+    position:relative;
 }
 
 .section-title::after{
     content:"";
-    width:60px;
+    width:80px;
     height:4px;
     background:linear-gradient(to right,#ff4d4d,#4e73df);
     display:block;
-    margin:10px auto;
+    margin:10px auto 0;
+    border-radius:5px;
 }
 
-/* ABOUT FULL */
+/* ===============================
+   ABOUT SECTION
+=================================*/
 .about{
     padding:120px 0;
     background:#f5f7fa;
@@ -111,7 +126,6 @@ body{
     flex-wrap:wrap;
 }
 
-/* CARD */
 .about-card{
     background:linear-gradient(135deg,#4e73df,#8e44ad);
     color:white;
@@ -131,12 +145,10 @@ body{
     color:orange;
 }
 
-/* RIGHT SIDE */
 .about-right{
     flex:1;
 }
 
-/* TEXT */
 .about-text{
     font-size:18px;
     line-height:1.6;
@@ -155,7 +167,7 @@ body{
     border-radius:5px;
 }
 
-/* DATA */
+/* DATA PRIBADI */
 .data-pribadi h3{
     margin-bottom:20px;
 }
@@ -167,7 +179,9 @@ body{
     border-bottom:1px solid #ddd;
 }
 
-/* ===== SKILLS SECTION ===== */
+/* ===============================
+   SKILLS SECTION
+=================================*/
 .skills{
     padding:120px 0;
     background:linear-gradient(to bottom,#e8eef5,#dce3ec);
@@ -195,7 +209,6 @@ body{
 
 .skill-card h3{
     margin:15px 0 25px;
-    font-size:20px;
 }
 
 .icon{
@@ -211,7 +224,6 @@ body{
     font-weight:500;
 }
 
-/* PROGRESS BAR */
 .progress{
     height:8px;
     background:#e0e0e0;
@@ -224,4 +236,99 @@ body{
     height:100%;
     background:linear-gradient(to right,#4e73df,#e74a3b);
     border-radius:10px;
+}
+
+/* ===============================
+   EXPERIENCE SECTION
+=================================*/
+.experience{
+    padding:120px 0;
+    background:#f5f7fa;
+}
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline::after{
+    content:"";
+    position:absolute;
+    width:4px;
+    background:linear-gradient(to bottom,#4e73df,#e74a3b);
+    top:0;
+    bottom:0;
+    left:50%;
+    margin-left:-2px;
+}
+
+.timeline-item{
+    padding:20px 40px;
+    position:relative;
+    width:50%;
+}
+
+.timeline-item.left{
+    left:0;
+}
+
+.timeline-item.right{
+    left:50%;
+}
+
+.timeline-content{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.company{
+    display:block;
+    font-weight:bold;
+    color:#4e73df;
+    margin-bottom:5px;
+}
+
+.year{
+    display:inline-block;
+    background:#e9ecef;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.timeline-content ul{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+.timeline-content ul li{
+    margin-bottom:8px;
+}
+
+/* ===============================
+   RESPONSIVE
+=================================*/
+@media screen and (max-width:768px){
+
+    .about-wrapper{
+        flex-direction:column;
+    }
+
+    .timeline::after{
+        left:20px;
+    }
+
+    .timeline-item{
+        width:100%;
+        padding-left:60px;
+        padding-right:25px;
+    }
+
+    .timeline-item.right{
+        left:0;
+    }
 }
